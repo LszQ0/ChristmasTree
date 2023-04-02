@@ -6,15 +6,16 @@ public class Main {
 
     /* tree cone */
 
-    for (int i = 0; i < 7; i++) {   //how high tree will be
-        for (int j = 0; j < 14; j++) {  //how wide bottom level will be (it's 2 * tree high)
-            if (j < 7 - i || j > 7 + i) {   //7 is middle of the tree, this line implies boundaries of the tree
+    for (int treeHeight = 0; treeHeight < 7; treeHeight++) {   //how high tree will be
+        for (int treeWidth = 0; treeWidth < 14; treeWidth++) {  //how wide bottom level will be (it's 2 * tree high)
+            if (treeWidth < 7 - treeHeight || treeWidth > 7 + treeHeight) {   //7 is middle of the tree, this line implies boundaries of the tree
                 System.out.print(" ");
             }
             else {
+
                 System.out.print("*");
             }
-            //System.out.println("i = " + i + ", j = " + j);
+            //System.out.println("treeHeight = " + treeHeight + ", treeWidth = " + treeWidth);
         }
         System.out.println();
 
